@@ -69,9 +69,11 @@ dependencies {
 
     //For Heroku
 //    compile 'org.eclipse.jetty:jetty-runner:9.2.11.v20150529'
-//    compile 'com.github.jsimone:webapp-runner:8.0.30.2'
+    compile 'com.github.jsimone:webapp-runner:8.0.30.2'
 
+    runtime 'postgresql:postgresql:8.4-702.jdbc3'
     runtime "com.h2database:h2"
+    
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
     testCompile "org.grails:grails-datastore-rest-client"
@@ -84,7 +86,6 @@ bootRun {
 }
 
 // For Heroku
-/*
 task stage() {
     dependsOn clean, war
 }
@@ -104,7 +105,7 @@ task copyToLib(type: Copy) {
 }
 
 stage.dependsOn(copyToLib)
-*/
+
 
 
 
