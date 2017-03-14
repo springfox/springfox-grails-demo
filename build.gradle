@@ -67,6 +67,10 @@ dependencies {
     compile "io.springfox:springfox-swagger-ui:${springfox}"
     compile "io.springfox.grails:springfox-grails:${springfoxGrails}"
 
+    //For Heroku
+//    compile 'org.eclipse.jetty:jetty-runner:9.2.11.v20150529'
+//    compile 'com.github.jsimone:webapp-runner:8.0.30.2'
+
     runtime "com.h2database:h2"
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
@@ -79,5 +83,28 @@ bootRun {
     jvmArgs('-Dspring.output.ansi.enabled=always')
 }
 
-task stage(dependsOn: ['build', 'clean'])
-build.mustRunAfter clean
+// For Heroku
+/*
+task stage() {
+    dependsOn clean, war
+}
+tasks.stage.doLast() {
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/assetCompile")
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/libs", exclude: "*.war")
+}
+war.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)
+*/
+
+
+
