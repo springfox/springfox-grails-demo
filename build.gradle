@@ -78,3 +78,6 @@ dependencies {
 bootRun {
     jvmArgs('-Dspring.output.ansi.enabled=always')
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
