@@ -68,6 +68,13 @@ hibernate:
         use_query_cache: false
         region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
 
+dataSource:
+    pooled: true
+    jmxExport: true
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    
 environments:
     development:
         dataSource:
