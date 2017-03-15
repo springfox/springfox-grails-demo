@@ -67,9 +67,9 @@ dependencies {
     console "org.grails:grails-console"
     profile "org.grails.profiles:rest-api"
 
-    compile("io.springfox:springfox-swagger2:${springfox}")
-    compile("io.springfox:springfox-swagger-ui:${springfox}")
-    compile("io.springfox.grails:springfox-grails:${springfoxGrails}")
+    compile("io.springfox:springfox-swagger2:${springfox}") { changing = true }
+    compile("io.springfox:springfox-swagger-ui:${springfox}") { changing = true }
+    compile("io.springfox.grails:springfox-grails:${springfoxGrails}") { changing = true }
 
 //    compile "com.h2database:h2" //For local testing
     compile 'org.postgresql:postgresql:9.4.1212'
