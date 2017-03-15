@@ -1,1 +1,1 @@
-web: ./grailsw run-app
+web: ./grailsw -Dgrails.server.port.http=$PORT run-app
