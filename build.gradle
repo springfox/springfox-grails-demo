@@ -66,7 +66,7 @@ dependencies {
     compile "io.springfox:springfox-swagger-ui:${springfox}"
     compile "io.springfox.grails:springfox-grails:${springfoxGrails}"
 
-//    runtime "com.h2database:h2" //For local testing
+//    compile "com.h2database:h2" //For local testing
     compile 'org.postgresql:postgresql:9.4.1212'
     compile 'com.github.jsimone:webapp-runner:8.5.11.3'
     
