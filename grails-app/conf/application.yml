@@ -75,6 +75,7 @@ hibernate:
 #    driverClassName: org.h2.Driver
 #    username: sa
 #    password:
+
     
 environments:
     development:
