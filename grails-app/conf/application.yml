@@ -76,7 +76,6 @@ hibernate:
 #    username: sa
 #    password:
 
-    
 environments:
     development:
         dataSource:
