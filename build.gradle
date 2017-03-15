@@ -43,7 +43,6 @@ dependencies {
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.grails:grails-core"
     compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "org.springframework.boot:spring-boot-starter-tomcat"
     compile "org.grails:grails-plugin-url-mappings"
     compile "org.grails:grails-plugin-rest"
     compile "org.grails:grails-plugin-codecs"
@@ -67,14 +66,11 @@ dependencies {
     compile "io.springfox:springfox-swagger-ui:${springfox}"
     compile "io.springfox.grails:springfox-grails:${springfoxGrails}"
 
-    runtime "com.h2database:h2"
+    compile 'org.postgresql:postgresql:9.4.1212'
     compile 'com.github.jsimone:webapp-runner:8.5.11.3'
     
     testCompile "org.grails:grails-plugin-testing"
-    testCompile "org.grails.plugins:geb"
     testCompile "org.grails:grails-datastore-rest-client"
-    testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
-    testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 }
 
 bootRun {
