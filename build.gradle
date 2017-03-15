@@ -68,6 +68,7 @@ dependencies {
     compile "io.springfox.grails:springfox-grails:${springfoxGrails}"
 
     runtime "com.h2database:h2"
+    compile 'com.github.jsimone:webapp-runner:8.5.11.3'
     
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails.plugins:geb"
@@ -84,6 +85,21 @@ bootRun {
 task stage() {
     dependsOn clean, war
 }
+tasks.stage.doLast() {
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/assetCompile")
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/libs", exclude: "*.war")
+}
+war.mustRunAfter clean
 
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)
 
 
