@@ -38,6 +38,11 @@ ext {
     springfoxGrails = "1.0.0-SNAPSHOT"
 }
 
+configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
@@ -62,9 +67,9 @@ dependencies {
     console "org.grails:grails-console"
     profile "org.grails.profiles:rest-api"
 
-    compile("io.springfox:springfox-swagger2:${springfox}") { changing = true }
-    compile("io.springfox:springfox-swagger-ui:${springfox}") { changing = true }
-    compile("io.springfox.grails:springfox-grails:${springfoxGrails}") { changing = true }
+    compile("io.springfox:springfox-swagger2:${springfox}")
+    compile("io.springfox:springfox-swagger-ui:${springfox}")
+    compile("io.springfox.grails:springfox-grails:${springfoxGrails}")
 
 //    compile "com.h2database:h2" //For local testing
     compile 'org.postgresql:postgresql:9.4.1212'
