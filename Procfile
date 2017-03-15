@@ -1,1 +1,1 @@
-web: ./grailsw -Dgrails.server.port.http=$PORT run-app
+web: ./grailsw $JAVA_OPTS -Dgrails.server.port.http=$PORT run-app
