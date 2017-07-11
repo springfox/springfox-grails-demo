@@ -70,8 +70,8 @@ dependencies {
     compile("io.springfox:springfox-swagger-ui:${springfox}") { changing = true }
     compile("io.springfox.grails:springfox-grails:${springfoxGrails}") { changing = true }
 
-//    compile "com.h2database:h2" //For local testing
-    compile 'org.postgresql:postgresql:9.4.1212'
+    compile "com.h2database:h2" //For local testing
+//    compile 'org.postgresql:postgresql:9.4.1212' //for heroku
     compile 'com.github.jsimone:webapp-runner:8.5.11.3'
     
     testCompile "org.grails:grails-plugin-testing"
