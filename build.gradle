@@ -72,7 +72,7 @@ dependencies {
 
     compile "com.h2database:h2" //For local testing
 //    compile 'org.postgresql:postgresql:9.4.1212' //for heroku
-    compile 'com.github.jsimone:webapp-runner:8.5.11.3'
+    compile 'com.github.jsimone:webapp-runner:9.0.27.1'
     
     testCompile "org.grails:grails-plugin-testing"
     testCompile "org.grails:grails-datastore-rest-client"
