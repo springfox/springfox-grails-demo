@@ -33,7 +33,7 @@ dependencyManagement {
 }
 
 ext {
-    springfox = "2.7.1-SNAPSHOT"
+    springfox = "3.0.0"
     springfoxGrails = "1.0.1-SNAPSHOT"
 }
 
